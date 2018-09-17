@@ -12,18 +12,18 @@ export const SET_TOPIC_DETAIL = 'SET_TOPIC_DETAIL';
  * action 创建函数
  */
 
-export function getLatest(data: any) {
-    return { type: GET_LATEST, data };
+export function getLatest(data : any) {
+  return {type: GET_LATEST, data};
 }
-export function getNodes(data: any){
-    return { type: GET_NODES, data };
+export function getNodes(data : any) {
+  return {type: GET_NODES, data};
 }
-export function getNodeList(data: any){
-    return { type: GET_NODE_LIST, data };
+export function getNodeList(data : any) {
+  return {type: GET_NODE_LIST, data};
 }
-export function setTopicView(topic: any) {
-    return { type: SET_TOPIC_VIEW, topic };
+export function setTopicView(topic : any) {
+  return {type: SET_TOPIC_VIEW, topic};
 }
-export function setTopicDetial(info: any) {
-    return { type: SET_TOPIC_DETAIL, info };
+export function setTopicDetial(info : any) {
+  return {type: SET_TOPIC_DETAIL, info};
 }
