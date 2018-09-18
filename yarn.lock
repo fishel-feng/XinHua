@@ -4208,6 +4208,10 @@ react-lifecycles-compat@^3, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "http://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 
+react-native-cell-components@^0.4.4:
+  version "0.4.4"
+  resolved "http://registry.npm.taobao.org/react-native-cell-components/download/react-native-cell-components-0.4.4.tgz#d0f264acccd81309bd14c1dfcbe9ab2c63339ed1"
+
 react-native-dismiss-keyboard@1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/react-native-dismiss-keyboard/download/react-native-dismiss-keyboard-1.0.0.tgz#32886242b3f2317e121f3aeb9b0a585e2b879b49"

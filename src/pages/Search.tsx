@@ -6,7 +6,7 @@ interface IProp {
 }
 
 export class Search extends Component<IProp> {
-  public static navigationOptions = {
+  private static navigationOptions = {
     title: 'Search',
     headerRight: (
       <Button
