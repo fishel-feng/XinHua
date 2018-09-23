@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
 import { reduxifyNavigator, createReactNavigationReduxMiddleware } from 'react-navigation-redux-helpers';
-import { home as Home } from './home';
+import { stack as Stack } from './stack';
 
 const middleware = createReactNavigationReduxMiddleware(
   'root',
   (state: any) => state.nav
 );
 
-const appWithNavigationState: any = reduxifyNavigator(Home, 'root');
+const appWithNavigationState: any = reduxifyNavigator(Stack, 'root');
 
 const mapStateToProps = (state: any) => ({
   state: state.nav,
@@ -15,4 +15,4 @@ const mapStateToProps = (state: any) => ({
 
 const root = connect(mapStateToProps)(appWithNavigationState);
 
-export { Home, root, middleware };
+export { Stack, root, middleware };

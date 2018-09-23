@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { View, Text, Button } from 'react-native';
 
 interface IProp {
   navigation: any
 }
 
-export class Home extends Component<IProp> {
+export class Home extends PureComponent<IProp> {
   private static navigationOptions = {
     title: 'Home',
     headerRight: (

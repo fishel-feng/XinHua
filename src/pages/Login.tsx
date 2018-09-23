@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { View, Text } from 'react-native';
 
-export class Login extends Component {
+export class Login extends PureComponent {
   public render () {
     return (
       <View>

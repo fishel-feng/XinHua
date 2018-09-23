@@ -1,17 +1,10 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { View, Text, Button } from 'react-native';
 
-export class Detail extends Component {
+export class Detail extends PureComponent {
 
   public static navigationOptions = {
-    title: 'Detail',
-    headerRight: (
-      <Button
-        onPress={() => console.log(1)}
-        title="Info"
-        color="#ccc"
-      />
-    ),
+    title: 'Detail'
   };
 
   public render() {

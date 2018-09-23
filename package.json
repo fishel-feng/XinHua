@@ -10,11 +10,13 @@
     "immutable": "^3.8.2",
     "react": "16.4.1",
     "react-native": "0.56.0",
+    "react-native-button": "^2.3.0",
     "react-native-cell-components": "^0.4.4",
     "react-native-vector-icons": "^5.0.0",
     "react-navigation": "^2.12.1",
     "react-navigation-redux-helpers": "^2.0.5",
     "react-redux": "^5.0.7",
+    "react-search-input": "^0.11.3",
     "redux": "^4.0.0",
     "redux-immutable": "^4.0.0"
   },

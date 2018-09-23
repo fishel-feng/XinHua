@@ -12,12 +12,12 @@
 //     'Shake or press menu button for dev menu',
 // });
 
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Provider } from 'react-redux';
 import { store } from './src/store';
 import { root as Root } from './src/navigation';
 
-export class App extends Component {
+export class App extends PureComponent {
   public render () {
     return (
       <Provider store={store}>

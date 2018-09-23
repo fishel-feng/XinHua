@@ -7,3 +7,8 @@ declare module 'react-native-cell-components' {
   export const Cell: any;
   export const CellGroup: any;
 }
+
+declare module 'react-native-button' {
+  const Button: any;
+  export default Button;
+}
