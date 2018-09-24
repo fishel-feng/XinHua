@@ -1,4 +1,5 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
+import { PureComponent } from '../components/PureComponent';
 import { View, Text, Button } from 'react-native';
 
 interface IProp {

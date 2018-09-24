@@ -12,7 +12,8 @@
 //     'Shake or press menu button for dev menu',
 // });
 
-import React, { PureComponent } from 'react';
+import React from 'react';
+import { PureComponent } from './src/components/PureComponent';
 import { Provider } from 'react-redux';
 import { store } from './src/store';
 import { root as Root } from './src/navigation';

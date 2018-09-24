@@ -1,4 +1,3 @@
-import React from 'react';
 import { createBottomTabNavigator, createStackNavigator } from 'react-navigation';
 import { Search } from '../pages/Search';
 import { Dictionary } from '../pages/Dictionary';

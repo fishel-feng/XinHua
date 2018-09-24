@@ -1,4 +1,5 @@
-import React, { PureComponent } from "react";
+import React from "react";
+import { PureComponent } from '../components/PureComponent';
 import { View, Text } from 'react-native';
 
 export class Community extends PureComponent {

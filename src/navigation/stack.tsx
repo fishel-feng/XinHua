@@ -12,6 +12,6 @@ export const stack = createStackNavigator({
     }
   },
   Detail,
-  About,
-  Feedback
+  Feedback,
+  About
 });

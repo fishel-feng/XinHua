@@ -1,5 +1,6 @@
-import React, { PureComponent, Children } from 'react';
-import { View, Text, TextInput, StyleSheet, Dimensions } from 'react-native';
+import React from 'react';
+import { PureComponent } from '../components/PureComponent';
+import { View, Text, TextInput, StyleSheet } from 'react-native';
 import Button from 'react-native-button';
 
 interface IProp {
@@ -13,15 +14,7 @@ interface IState {
 export class Search extends PureComponent<IProp, IState> {
 
   private static navigationOptions = {
-    title: 'Search',
-    headerRight: (
-      <Button
-        style={{color: '#ccc'}}
-        styleDisabled={{color: 'red'}}
-        onPress={() => console.log(1)}>
-        Info
-      </Button>
-    )
+    title: 'Search'
   };
 
   public state = {
@@ -57,7 +50,6 @@ export class Search extends PureComponent<IProp, IState> {
 
 const style = StyleSheet.create({
   search: {
-    // width: Dimensions.get('window').width,
     marginTop: 10,
     alignItems: 'center'
   },
