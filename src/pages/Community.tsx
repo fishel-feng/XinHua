@@ -1,6 +1,6 @@
 import React from "react";
 import { PureComponent } from '../components/PureComponent';
-import { View, Text, FlatList } from 'react-native';
+import { View, Text, FlatList, StyleSheet } from 'react-native';
 
 interface Item {
   key: string,
@@ -18,7 +18,7 @@ export class Community extends PureComponent<{}, IState> {
   };
 
   public state = {
-    items: [{key: 'a', id: '1'}, {key: 'b', id: '2'}]
+    items: [{key: 'a', id: '1'}, {key: 'b', id: '2'}, {key: 'b', id: '3'}, {key: 'b', id: '4'}]
   };
 
   public render() {
@@ -27,12 +27,30 @@ export class Community extends PureComponent<{}, IState> {
         <FlatList
           data={this.state.items}
           keyExtractor={item => item.id}
-          renderItem={this.listItem}/>
+          renderItem={this.listItem}
+          ItemSeparatorComponent={this.separator}/>
       </View>
     );
   }
 
-  private listItem = ({item}: {item: Item})=> {
-    return <Text>{item.key}</Text>;
-  };
+  private listItem = ({item}: {item: Item})=> (
+    <View style={style.item}>
+      <Text>{item.key}</Text>
+    </View>
+  );
+
+  private separator = () => (
+    <View style={style.separator}></View>
+  );
 }
+
+const style = StyleSheet.create({
+  item: {
+    backgroundColor: '#ffffff',
+    padding: 10
+  },
+  separator: {
+    backgroundColor: '#e9e9ef',
+    height: 5
+  }
+});
