@@ -32,6 +32,12 @@ function nav(state = home, action: any) {
         state
       );
       break;
+    case 'Discuss':
+      nextState = Stack.router.getStateForAction(
+        NavigationActions.navigate({ routeName: 'Discuss' }),
+        state
+      );
+      break;
     case 'Logout':
       nextState = Stack.router.getStateForAction(
         NavigationActions.navigate({ routeName: 'Login' }),

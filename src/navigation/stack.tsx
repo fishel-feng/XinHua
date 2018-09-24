@@ -3,6 +3,7 @@ import { tab as Tab } from './tab';
 import { Detail } from '../pages/Detail';
 import { About } from '../pages/About';
 import { Feedback } from '../pages/Feedback';
+import { Discuss } from '../pages/Discuss';
 
 export const stack = createStackNavigator({
   Tab: {
@@ -13,5 +14,6 @@ export const stack = createStackNavigator({
   },
   Detail,
   Feedback,
-  About
+  About,
+  Discuss
 });

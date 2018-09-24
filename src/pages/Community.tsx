@@ -1,6 +1,6 @@
 import React from "react";
 import { PureComponent } from '../components/PureComponent';
-import { View, Text, FlatList, StyleSheet } from 'react-native';
+import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 
 interface Item {
   id: string,
@@ -8,11 +8,15 @@ interface Item {
   content: string,
 }
 
+interface IProp {
+  navigation: any
+}
+
 interface IState {
   items: Item[]
 }
 
-export class Community extends PureComponent<{}, IState> {
+export class Community extends PureComponent<IProp, IState> {
 
   private static navigationOptions = {
     title: '社区'
@@ -39,8 +43,12 @@ export class Community extends PureComponent<{}, IState> {
     );
   }
 
+  private showDetail = () => {
+    this.props.navigation.dispatch({ type: 'Discuss' });
+  };
+
   private listItem = ({item}: {item: Item})=> (
-    <View style={style.item}>
+    <TouchableOpacity onPress={this.showDetail} style={style.item}>
       <Text style={style.itemTitle}>{item.title}</Text>
       <Text style={style.itemContent}>{item.content}</Text>
       <Text>图片</Text>
@@ -48,7 +56,7 @@ export class Community extends PureComponent<{}, IState> {
         <Text>1997-10-15 13:13:23</Text>
         <Text>xx赞xx评论</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 
   private separator = () => (
