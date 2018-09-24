@@ -3,8 +3,9 @@ import { PureComponent } from '../components/PureComponent';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
 
 interface Item {
-  key: string,
-  id: string
+  id: string,
+  title: string,
+  content: string,
 }
 
 interface IState {
@@ -18,7 +19,12 @@ export class Community extends PureComponent<{}, IState> {
   };
 
   public state = {
-    items: [{key: 'a', id: '1'}, {key: 'b', id: '2'}, {key: 'b', id: '3'}, {key: 'b', id: '4'}]
+    items: [
+      {title: 'a', content: '111', id: '1'},
+      {title: 'b', content: '111', id: '2'},
+      {title: 'c', content: '111', id: '3'},
+      {title: 'd', content: '111', id: '4'}
+    ]
   };
 
   public render() {
@@ -35,7 +41,13 @@ export class Community extends PureComponent<{}, IState> {
 
   private listItem = ({item}: {item: Item})=> (
     <View style={style.item}>
-      <Text>{item.key}</Text>
+      <Text style={style.itemTitle}>{item.title}</Text>
+      <Text style={style.itemContent}>{item.content}</Text>
+      <Text>图片</Text>
+      <View style={{flexDirection: 'row', justifyContent: 'space-between', marginTop: 5}}>
+        <Text>1997-10-15 13:13:23</Text>
+        <Text>xx赞xx评论</Text>
+      </View>
     </View>
   );
 
@@ -48,6 +60,14 @@ const style = StyleSheet.create({
   item: {
     backgroundColor: '#ffffff',
     padding: 10
+  },
+  itemTitle: {
+    fontSize: 20,
+    color: '#000000'
+  },
+  itemContent: {
+    marginTop: 5,
+    marginBottom: 5
   },
   separator: {
     backgroundColor: '#e9e9ef',
