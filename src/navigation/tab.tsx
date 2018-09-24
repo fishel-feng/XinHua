@@ -6,9 +6,9 @@ import { User } from '../pages/User';
 
 export const tab = createBottomTabNavigator(
   {
-    Community: createStackNavigator({Community}),
     Search: createStackNavigator({Search}),
     Dictionary: createStackNavigator({Dictionary}),
+    Community: createStackNavigator({Community}),
     User: createStackNavigator({User})
   },
   {

@@ -9,8 +9,9 @@ interface IProp {
 }
 
 export class User extends PureComponent<IProp> {
+
   private static navigationOptions = {
-    title: 'User'
+    title: '用户'
   };
 
   public render() {

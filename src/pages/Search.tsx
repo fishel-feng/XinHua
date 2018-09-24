@@ -14,7 +14,7 @@ interface IState {
 export class Search extends PureComponent<IProp, IState> {
 
   private static navigationOptions = {
-    title: 'Search'
+    title: '查字'
   };
 
   public state = {
