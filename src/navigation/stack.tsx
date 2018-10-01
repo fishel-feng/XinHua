@@ -4,6 +4,9 @@ import { Detail } from '../pages/Detail';
 import { About } from '../pages/About';
 import { Feedback } from '../pages/Feedback';
 import { Discuss } from '../pages/Discuss';
+import { Ci } from '../pages/Ci';
+import { Idiom } from '../pages/Idiom';
+import { XieHouYu } from '../pages/XieHouYu';
 
 export const stack = createStackNavigator({
   Tab: {
@@ -15,5 +18,8 @@ export const stack = createStackNavigator({
   Detail,
   Feedback,
   About,
-  Discuss
+  Discuss,
+  Ci,
+  Idiom,
+  XieHouYu
 });

@@ -3,7 +3,11 @@ import { PureComponent } from '../components/PureComponent';
 import { View, Text, Dimensions, StyleSheet } from 'react-native';
 import Button from 'react-native-button';
 
-export class Dictionary extends PureComponent {
+interface IProp {
+  navigation: any
+}
+
+export class Dictionary extends PureComponent<IProp> {
 
   private static navigationOptions = {
     title: '词典'
@@ -13,17 +17,29 @@ export class Dictionary extends PureComponent {
     return (
       <View style={{height: Dimensions.get('window').height - 130}}>
         <View style={style.item}>
-          <Button style={style.itemText}>词语</Button>
+          <Button onPress={this.showCi} style={style.itemText}>词语</Button>
         </View>
         <View style={style.item}>
-          <Button style={style.itemText}>成语</Button>
+          <Button onPress={this.showIdiom} style={style.itemText}>成语</Button>
         </View>
         <View style={style.item}>
-          <Button style={style.itemText}>歇后语</Button>
+          <Button onPress={this.showXieHouYu} style={style.itemText}>歇后语</Button>
         </View>
       </View>
     );
   }
+
+  private showCi = () => {
+    this.props.navigation.dispatch({ type: 'Ci' });
+  };
+
+  private showIdiom = () => {
+    this.props.navigation.dispatch({ type: 'Idiom' });
+  };
+
+  private showXieHouYu = () => {
+    this.props.navigation.dispatch({ type: 'XieHouYu' });
+  };
 }
 
 const style = StyleSheet.create({

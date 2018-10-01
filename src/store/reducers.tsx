@@ -38,6 +38,24 @@ function nav(state = home, action: any) {
         state
       );
       break;
+    case 'Ci':
+      nextState = Stack.router.getStateForAction(
+        NavigationActions.navigate({ routeName: 'Ci' }),
+        state
+      );
+      break;
+    case 'Idiom':
+      nextState = Stack.router.getStateForAction(
+        NavigationActions.navigate({ routeName: 'Idiom' }),
+        state
+      );
+      break;
+    case 'XieHouYu':
+      nextState = Stack.router.getStateForAction(
+        NavigationActions.navigate({ routeName: 'XieHouYu' }),
+        state
+      );
+      break;
     case 'Logout':
       nextState = Stack.router.getStateForAction(
         NavigationActions.navigate({ routeName: 'Login' }),
