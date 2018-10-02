@@ -8,7 +8,7 @@ const home = Stack.router.getActionForPathAndParams('Home');
 function nav(state = home, action: any) {
   let nextState;
   switch (action.type) {
-    case 'Login':
+    case 'Back':
       nextState = Stack.router.getStateForAction(
         NavigationActions.back(),
         state

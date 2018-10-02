@@ -5,7 +5,7 @@ import { View, Text } from 'react-native';
 export class Ci extends PureComponent {
 
   public static navigationOptions = {
-    title: '词'
+    title: '词语查询'
   };
 
   public render() {

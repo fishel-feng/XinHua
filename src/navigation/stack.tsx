@@ -8,18 +8,20 @@ import { Ci } from '../pages/Ci';
 import { Idiom } from '../pages/Idiom';
 import { XieHouYu } from '../pages/XieHouYu';
 
-export const stack = createStackNavigator({
-  Tab: {
-    screen: Tab,
-    navigationOptions: {
-      header: null
-    }
-  },
-  Detail,
-  Feedback,
-  About,
-  Discuss,
-  Ci,
-  Idiom,
-  XieHouYu
-});
+export const stack = createStackNavigator(
+  {
+    Tab: {
+      screen: Tab,
+      navigationOptions: {
+        header: null
+      }
+    },
+    Detail,
+    Feedback,
+    About,
+    Discuss,
+    Ci,
+    Idiom,
+    XieHouYu
+  }
+);
